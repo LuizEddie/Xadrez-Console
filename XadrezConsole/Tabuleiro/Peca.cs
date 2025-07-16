@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using tabuleiro;
+using xadrez;
 
 namespace tabuleiro
 {
@@ -22,6 +23,9 @@ namespace tabuleiro
             QteMovimentos = 0;
         }
 
-
+        public void IncrementarQteMovimentos()
+        {
+            QteMovimentos++;
+        }
     }
 }
