@@ -8,7 +8,7 @@ using xadrez;
 
 namespace tabuleiro
 {
-    internal class Peca
+    internal abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
@@ -27,5 +27,14 @@ namespace tabuleiro
         {
             QteMovimentos++;
         }
+
+        public bool PodeMover(Posicao pos)
+        {
+            Peca p = Tab.Peca(pos);
+
+            return p == null || p.Cor != Cor;
+        }
+
+        public abstract bool[,] MovimentosPossiveis();
     }
 }
