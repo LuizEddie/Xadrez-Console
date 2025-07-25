@@ -52,6 +52,10 @@ internal class Program
         {
             Console.WriteLine(e.Message);
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
 
         Console.ReadLine();
 
